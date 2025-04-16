@@ -1,0 +1,225 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* reset.css */
+* { 
+    margin: 0; padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+
+/* header 영역 */
+
+header {
+    height: 100vh;
+    background-image: url(images/bgimg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head {
+    width: 500px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    border-radius: 10px;
+}
+#head > p:nth-child(1) {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    font-weight: bolder;
+}
+#head > p:nth-child(2) {
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.button_style {
+    background-color: #000;
+    width: 400px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+}
+.button_style > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.button_style:hover {
+    background-color: #82A7BA;
+}
+
+
+
+/* section [sns] 영역 */
+
+section#sns {
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+section#sns > .card {
+    width: 300px;
+    text-align: center;
+}
+
+section#sns > .card > .icon {
+    background-color: #dddddd;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#sns > .card > .icon > i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+section#sns > .card > p:nth-of-type(1) {
+    font-weight: bolder;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+section#sns > .card > p:nth-of-type(2) {
+    font-size: 0.8rem;
+    color: #333;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+section#sns > .card > a {
+    text-decoration: none;
+    color: #5d9ab2;
+}
+
+section#sns > .card > a > span {
+    font-weight: 900;
+}
+
+
+
+/* section [detail] 영역 */
+
+section#detail {
+    background-color: #5d9ab2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+}
+
+section#life {
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+section#detail > div,
+section#life > div {
+    width: 430px;
+    height: 200px;
+    padding: 40px;
+}
+
+section#detail > .img {
+    background-image: url(images/bgimg2.jpg);
+    background-size: cover;
+}
+
+section#life > .img {
+    background-image: url(images/bgimg3.jpg);
+    background-size: cover;
+}
+
+section#detail > .txt > p:nth-of-type(1),
+section#life > .txt > p:nth-of-type(1) {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+section#detail > .txt > p:nth-of-type(2) {
+    font-size: 0.8rem;
+    line-height: 2;
+    margin: 20px 0;
+    color: #CDE0E7;
+}
+
+section#life > .txt > p:nth-of-type(2) {
+    font-size: 0.8rem;
+    line-height: 2;
+    margin: 20px 0;
+    color: #000;
+}
+
+section#detail > .txt > p:nth-of-type(3),
+section#life > .txt > p:nth-of-type(3) {
+    margin: 0;
+    position: relative;
+    top: 30px;
+    width: 400px;
+    text-align: center;
+}
+
+
+
+/* footer 영역 */
+
+footer {
+    background-color: #2B5566;
+    color: #fff;
+    padding: 40px 100px;
+}
+
+footer > .foothead > p {
+    font-size: 0.8rem;
+}
+
+footer > .foothead > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8rem;
+}
+footer > .footlist {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+footer > .footlist > .footmenu {
+    flex: 1;
+}
+
+footer > .footlist > .footmenu > ul > li {
+    list-style: none;
+    line-height: 2;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+footer > .footlist > .footmenu > ul > li:nth-child(1) {
+    font-weight: 500;
+    border-bottom: 0.5px solid #fff;
+}
+
+footer > .footlist > .footmenu > ul > li:nth-child(2) {
+    font-weight: 500;
+}
