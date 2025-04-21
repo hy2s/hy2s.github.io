@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Yes24</title>
+  </head>
+  <body>
+    <main>
+      <section class="left">
+            <div class="book">
+                <div class="page">
+                    <div class="front"><img src="images/front.jfif" height="100%"></div>
+                    <div class="back"><img src="images/back.jfif" height="100%" alt=""></div>
+                </div>
+                <div class="side"> <img src="images/side.jfif" height="100%" alt=""></div>
+            </div>
+        <div class="book-btn">
+          <p>미리보기</p>
+          <p>사이즈비교</p>
+          <p>카드뉴스</p>
+          <p>공유하기</p>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="title">
+          <div class="title1">
+            <p>소득공제</p>
+            <p>오늘의책</p>
+          </div>
+          <div class="title-txt">
+            <h1>강남 아파트 인사이트</h1>
+            <p>
+              강남을 처음 공부하는 당신에게, 3060 생애주기별 인생투자 가이드
+            </p>
+          </div>
+          <div class="title-txt2">
+            <a href="#">오스틀로이드 저</a>
+            <p>|</p>
+            <a href="#">진서원</a>
+            <p>|</p>
+            <p>2025년 04월 25일</p>
+          </div>
+          <div class="review">
+            <div class="review1">
+              <div class="star">
+                <img src="images/Star.png" alt="별점" />
+                <img src="images/Star.png" alt="별점" />
+                <img src="images/Star.png" alt="별점" />
+                <img src="images/Star.png" alt="별점" />
+                <img src="images/Star.png" alt="별점" />
+              </div>
+              <h1>9.8</h1>
+              <p class="iconbox">∨</p>
+            </div>
+            <div class="review2">
+              <a href="#">회원리뷰(<span>66</span>건)</a>
+              <p>|</p>
+              <p>판매지수 97,095</p>
+              <p class="iconbox">?</p>
+              <div class="best">
+                <img src="images/best.png" alt="베스트" />
+                <p>베스트</p>
+              </div>
+              <a href="#">국내도서 1위</a>
+              <p>|</p>
+              <p>국내도서 1위 1주</p>
+            </div>
+          </div>
+        </div>
+        <div class="pay">
+          <div class="price">
+            <div class="event">
+              <div class="eventicon">
+                <img src="images/gift.png" alt="선물 아이콘" />
+                <p>구매혜택</p>
+              </div>
+              <p>
+                [4월의 굿즈] 북커버/스트랩 북백/ 멀티 북 파우치/ 포켓 스탠드
+                (포인트 차감) >
+              </p>
+            </div>
+
+            <div class="pricetxt">
+
+            </div>
+
+            <div class="ptxt">
+                <div class="txt">
+                    <div>정가</div>
+                    <p>28,000원</p>
+                </div>
+                <div class="txt">
+                    <div class="text-black">판매가</div>
+                    <p class="text-red"><span class="text-bold">25,200</span>원 (10% 할인)</p>
+                </div>
+                <div class="txt">
+                    <div class="text-black">크레마머니<br><div>최대혜택가<div class="iconbox">?</div></div></div>
+                    <p class="text-black"><span class="text-bold">23,700</span>원</p>
+                </div>
+                <div class="txt">
+                    <div>YES포인트<div class="iconbox">?</div></div>
+                    <p>1,400원 (5% 적립)<br>5만원 이상 구매 시 2천원 추가 적립</p><div class="iconbox" style="width: 13px;">?</div>
+                </div>
+            </div>
+            <div class="ptxt2">
+                <div class="txt">
+                    <div>결제혜택</div>
+                    <p>카드/간편결제 혜택을 확인하세요</p><div class="iconbox" style="width: 13px;">∨</div>
+                </div>
+            </div>
+            <div class="ptxt3">
+                <div class="txt">
+                    <div>배송안내<div class="iconbox">></div></div>
+                    <p>서울특별시 영등포구 은행로 11(여의도동,일신빌딩) &nbsp; <span class="text-blue">지역변경 ∨</span></p>
+                </div>
+            </div>
+            <div class="ptxt4">
+                <p>하루배송</p>
+                <p>19시까지 주문하면 <span class="text-black">내일 (4/22, 화)</span> 도착예정</p>
+            </div>
+            <div class="txt">
+                <div>＊ 배송비 : 무료<div class="iconbox">?</div></div>
+              </div>
+
+          </div>
+
+          <div class="priceside">
+            <p></p>
+          </div>
+
+        </div>
+      </section>
+
+      <script>
+        const book = document.querySelector(".book");
+        book.addEventListener("click",()=>{
+            book.classList.toggle("flipped");
+        });
+    </script>
+    </main>
+  </body>
+</html>
