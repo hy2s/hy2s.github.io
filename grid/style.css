@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+body {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#menu-icon {
+    z-index: 10;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    font-size: 2rem;
+    animation: icon-move 0.5s infinite alternate;
+}
+@keyframes icon-move {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+        color: #d1d1d1;
+    }
+}
+
+/* ******************main******************* */
+main {
+    height: 100vh;
+}
+main > section {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: absolute;
+    top: 0; left:0;
+}
+main > section > p {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+/* ******************** box1 ********************** */
+
+section#box1 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4.1fr);
+}
+#box1 > p:nth-child(1) {
+    grid-column: 1 / 3;
+    font-size: 4rem;
+    background-color: #333;
+}
+#box1 > p:nth-child(2) {
+    background-image: url(images/m1.jpg);
+    background-size: cover;
+}
+#box1 > p:nth-child(3) {
+    background-color: #333;
+}
+#box1 > p:nth-child(4) {
+    background-color: #666;
+}
+#box1 > p:nth-child(5) {
+    background-color: #333;
+    background-image: url(images/m3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#box1 > p:nth-child(6) {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    background-image: url(images/m2.jpg);
+    background-size: cover;
+}
+#box1 > p:nth-child(7) {
+    background-image: url(images/m4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#box1 > p:nth-child(8) {
+    background-color: #444;
+}
+#box1 > p:nth-child(9) {
+    background-color: #444;
+}
+#box1 > p:nth-child(10) {
+    grid-column: 2 / 4;
+    background-image: url(images/m5.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#box1 > p:nth-child(11) {
+    background-color: #333;
+}
+
+
+/* ********************box2************************ */
+
+section#box2 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4.1fr);
+}
+#box2 > p:nth-child(1) {
+    background-color: #444;
+}
+#box2 >p:nth-child(2) {
+    background-image: url(images/w1.jpg);
+    background-size: contain;
+}
+#box2 > p:nth-child(3) {
+    grid-column: 3 / 5;
+    background-color: #333;
+    font-size: 3rem;
+}
+#box2 > p:nth-child(4) {
+    grid-row: 2 / 4;
+    background-image: url(images/w2.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+#box2 > p:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-image: url(images/w3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#box2 > p:nth-child(6) {
+    background-color: #333;
+    background-image: url(images/w4.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#box2 > p:nth-child(7) {
+    background-color: #444;
+}
+#box2 > p:nth-child(8) {
+    background-image: url(images/w5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#box2 > p:nth-child(9) {
+    background-color: #444;
+}
+#box2 > p:nth-child(10) {
+    background-image: url(images/w6.jpg);
+}
+#box2 > p:nth-child(11) {
+    background-image: url(images/w7.jpg);
+}
+
+
+/* ****************box3***************** */
+
+#box3 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+    "kid1 kid1 text1 kid2"
+    "kid1 kid1 text2 text2"
+    "kid1 kid1 kid3 text3"
+    "kid1 kid1 kid3 kid4";
+}
+#box3 > p:nth-child(1) {
+    grid-area: kid1;
+    background-image: url(images/k1.jpg);
+    background-size: cover;
+}
+#box3 > p:nth-child(2) {
+    grid-area: text1;
+    background-color: #444;
+}
+#box3 > p:nth-child(3) {
+    grid-area: kid2;
+    background-image: url(images/k2.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#box3 > p:nth-child(4) {
+    grid-area: text2;
+    background-color: #222;
+    font-size: 3rem;
+}
+#box3 > p:nth-child(5) {
+    grid-area: kid3;
+    background-image: url(images/k3.jpg);
+    background-size: cover;
+}
+#box3 > p:nth-child(6) {
+    grid-area: text3;
+    background-color: #777;
+}
+#box3 > p:nth-child(7) {
+    grid-area: kid4;
+    background-image: url(images/k4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
