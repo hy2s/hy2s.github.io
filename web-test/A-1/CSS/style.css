@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+li {
+    list-style: none;
+}
+body {
+    height: 100vh;
+    background-color: #fff;
+    color: #333;
+}
+
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/****************** nav ******************/
+header > nav {
+    width: 50%;
+}
+header > nav > ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main-menu {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+.main-menu a {
+    padding: 10px 0;
+}
+.main-menu > a:hover {
+    background-color: #222;
+    color: #fff;
+}
+/* .main-menu > a:hover + .sub-menu {
+    display: block;
+} */
+.sub-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #ddd;
+}
+.sub-menu > li > a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+
+
+
+
+section#slider {
+    height: 300px;
+    background-color: #555;
+}
+section#contents {
+    height: 200px;
+    display: flex;
+}
+section#contents > article {
+    flex: 1;
+}
+.tabs {}
+.tabs > .tab-menu > li {
+    display: inline-block;
+    padding: 8px 10px;
+}
+.tabs > .tab-menu > li.selected {
+    background-color: #222;
+    color: #fff;
+}
+.tab-item {
+    position: relative;
+    height: 123px;
+    padding: 20px;
+    background-color: #999;
+}
+.tab-item > ul {
+    position: absolute;
+    top: 30; left: 0;
+}
+.notice {
+    padding: 0px 20px;
+}
+.notice > li {
+    display: flex;
+    gap: 25px;
+    padding: 5px 0;
+}
+.notice > li > a {
+
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery {
+    display: none;
+    justify-content: space-around;
+    gap: 10px;
+}
+.gallery a {
+    width: 80%;
+    margin: 0 auto;
+}
+.gallery img {
+    width: 100%;
+}
+
+.banner, .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+}
+
+
+footer {
+    height: 100px;
+    display: flex;
+}
+footer > .f-logo {
+    width: 20%;
+    text-align: center;
+    line-height: 130px;
+}
+footer > .copyright {
+    width: 60%;
+    text-align: center;
+    line-height: 100px;
+}
+footer > .sns {
+    width: 20%;
+    margin: auto 0;
+}
+footer > .sns > a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
