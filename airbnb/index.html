@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>에어비앤비 클론</title>
+  </head>
+  <body>
+    <!-- 공통을 모바일을 기준으로 -->
+    <header>
+      <div class="mobile-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>검색을 시작해 보세요</span>
+      </div>
+      <div class="logo">
+        <h1><i class="fa-brands fa-airbnb"></i></h1>
+        <div class="menu">
+          <p>당신의 공간을 에어비앤비하세요</p>
+          <i class="fa-solid fa-globe"></i>
+          <div class="icon">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="tablet-search">
+        <div class="txt">
+          <h3>숙소</h3>
+          <h3>체험</h3>
+        </div>
+        <ul class="bar">
+          <li>
+            <p>여행지</p>
+            <p>여행지 검색</p>
+          </li>
+          <li>
+            <p>체크인</p>
+            <p>날짜 추가</p>
+          </li>
+          <li>
+            <p>체크아웃</p>
+            <p>날짜 추가</p>
+          </li>
+          <li>
+            <p>여행자</p>
+            <p>게스트 추가</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+        </ul>
+      </div>
+
+
+      <nav>
+        <ul>
+          <li>
+            <img src="images/menu-icon1.jpg" alt="메뉴아이콘1" />
+            <p>한적한 시골</p>
+          </li>
+          <li>
+            <img src="images/menu-icon2.png" alt="메뉴아이콘2" />
+            <p>컬처 아이콘</p>
+          </li>
+          <li>
+            <img src="images/menu-icon3.jpg" alt="메뉴아이콘3" />
+            <p>최고의 전망</p>
+          </li>
+          <li>
+            <img src="images/menu-icon4.jpg" alt="메뉴아이콘4" />
+            <p>한옥</p>
+          </li>
+          <li>
+            <img src="images/menu-icon5.jpg" alt="메뉴아이콘5" />
+            <p>인기 급상승</p>
+          </li>
+          <li>
+            <img src="images/menu-icon6.jpg" alt="메뉴아이콘6" />
+            <p>농장</p>
+          </li>
+          <li>
+            <img src="images/menu-icon7.jpg" alt="메뉴아이콘7" />
+            <p>멋진 수영장</p>
+          </li>
+          <li>
+            <img src="images/menu-icon8.jpg" alt="메뉴아이콘8" />
+            <p>해변 바로 앞</p>
+          </li>
+          <li>
+            <img src="images/menu-icon9.jpg" alt="메뉴아이콘9" />
+            <p>방</p>
+          </li>
+          <li>
+            <img src="images/menu-icon10.jpg" alt="메뉴아이콘10" />
+            <p>기상천외한 숙소</p>
+          </li>
+          <li>
+            <img src="images/menu-icon11.jpg" alt="메뉴아이콘11" />
+            <p>국립공원</p>
+          </li>
+          <li>
+            <img src="images/menu-icon12.jpg" alt="메뉴아이콘12" />
+            <p>캐슬</p>
+          </li>
+          <li>
+            <img src="images/menu-icon13.jpg" alt="메뉴아이콘10" />
+            <p>통나무집</p>
+          </li>
+          <li>
+            <img src="images/menu-icon14.jpg" alt="메뉴아이콘10" />
+            <p>초소형 주택</p>
+          </li>
+          <li>
+            <img src="images/menu-icon15.jpg" alt="메뉴아이콘10" />
+            <p>Luxe</p>
+          </li>
+          <li>
+            <img src="images/menu-icon16.jpg" alt="메뉴아이콘10" />
+            <p>키즈</p>
+          </li>
+          <li>
+            <img src="images/menu-icon17.jpg" alt="메뉴아이콘10" />
+            <p>속세를 벗어난 숙소</p>
+          </li>
+          <li>
+            <img src="images/menu-icon18.jpg" alt="메뉴아이콘10" />
+            <p>호숫가</p>
+          </li>
+          <li>
+            <img src="images/menu-icon19.jpg" alt="메뉴아이콘10" />
+            <p>캠핑장</p>
+          </li>
+          <li>
+            <img src="images/menu-icon20.jpg" alt="메뉴아이콘10" />
+            <p>호수 근처</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage1.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 Yesan-gun</h2>
+            <p>★ 4.92</p>
+          </div>
+          <p>94km 거리</p>
+          <p>6월8일 ~ 13일</p>
+          <p>게스트 한마디 <span>"한적한 동네라 오히려 편안했고"</span></p>
+          <p><span>￦216,824</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img"  style="background-image: url(images/cardimage2.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 Hongcheon-gun</h2>
+            <p>★ 4.9</p>
+          </div>
+          <p>60km 거리</p>
+          <p>5월 12일~17일</p>
+          <p>게스트 한마디 <span>"깔끔하고 아늑하고 ..."</span></p>
+          <p><span>￦141,506</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage3.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 가평군</h2>
+            <p>★ 5.0</p>
+          </div>
+          <p>44km 거리</p>
+          <p>5월 11일~16일</p>
+          <p>게스트 한마디 <span>"다시 오고 싶은 숙소..."</span></p>
+          <p><span>￦187,153</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage4.jpeg);">
+          <div class="top">
+            <p class="guest" style="opacity: 0;">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 Hongcheon-gun</h2>
+          </div>
+          <p>687km 거리</p>
+          <p>5월 14일~19일</p>
+          <p><span>￦878,706</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage5.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 Cheorwon-gun</h2>
+            <p>★ 5.0</p>
+          </div>
+          <p>72km 거리</p>
+          <p>5월 18일~23일</p>
+          <p><span>￦159,765</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage6.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 Yeoju-si</h2>
+            <p>★ 4.97</p>
+          </div>
+          <p>69km 거리</p>
+          <p>5월11일 ~ 16일</p>
+          <p>게스트 한마디 <span>"집도 사람도 순하고 ..."</span></p>
+          <p><span>￦136,941</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage7.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 원주시</h2>
+            <p>★ 4.96</p>
+          </div>
+          <p>78km 거리</p>
+          <p>5월 5일~10일</p>
+          <p>게스트 한마디 <span>"남자 넷이 재밌게 놀..."</span></p>
+          <p><span>￦180,306</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage8.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 양평군</h2>
+            <p>★ 5.0</p>
+          </div>
+          <p>60km 거리</p>
+          <p>5월 12일~17일</p>
+          <p>게스트 한마디 <span>"다음에는 2일은 잡고..."</span></p>
+          <p><span>￦600,259</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage9.jpeg);">
+          <div class="top">
+            <p class="guest">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 Jipyeong-myeon, Yangp...</h2>
+            <p>★ 4.92</p>
+          </div>
+          <p>57km 거리</p>
+          <p>5월 9일~14일</p>
+          <p>게스트 한마디 <span>"호스트님도 무척 친..."</span></p>
+          <p><span>￦350,341</span>/박</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img" style="background-image: url(images/cardimage10.jpeg);">
+          <div class="top">
+            <p class="guest" style="opacity: 0;">게스트 선호</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="center">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h2>한국 원주시</h2>
+            <p>★ 4.91</p>
+          </div>
+          <p>79km 거리</p>
+          <p>5월 25일~30일</p>
+          <p><span>￦124,388</span>/박</p>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      <h2>다음 여행을 위한 추천 여행지</h2>
+      <h3><span>카테고리</span></h3>
+      <ul class="items">
+        <li>멋진 수영장</li>
+        <li>북극</li>
+        <li>캠핑장</li>
+        <li>캠핑카</li>
+        <li>캐슬</li>
+        <li>한적한 시골</li>
+        <li>초소형 주택</li>
+        <li>더 보기 ∨</li>
+      </ul>
+      <p>ⓒ 2025 Airbnb, Inc </p>
+    </footer>
+  </body>
+</html>
