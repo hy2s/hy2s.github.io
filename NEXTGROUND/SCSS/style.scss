@@ -10,25 +10,41 @@ $gray2: #E2E2E2;
 $gray3: #F9F9F9;
 
 body {
-    min-width: 1700px;
+    width: 100%;
+    min-width: 1400px;
     font-family: "Pretendard";
     font-weight: 900;
     color: $font-color;
 }
+@media screen and (max-width: 768px) {
+    body{
+        min-width: 100%;
+    }
 
+}
 
 
 // *************header*************
 
 header {
+    @media screen and (max-width: 768px) {
+            // width: 100%;
+            // margin: 0 auto;
+        }
     nav{
         width: 72.92%;
-        margin: 25px auto;
+        padding: 25px 0;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 20px;
         font-weight: 500;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 25px 15px;
+            border-bottom: 1px solid $gray2;
+            }
         .logo{
             font-size: 35px;
             font-weight: 900;
@@ -53,13 +69,14 @@ header {
                     height: 3px;
                     background-color: $main-color;
                     transition: transform 0.3s ease;
-                  }
-                  &:hover::after {
+                    }
+                    &:hover::after {
                     transform: translateX(-50%) scaleX(1);
-                  }
+                    }
             }
-
-
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
         div{
             display: flex;
@@ -78,13 +95,29 @@ header {
             p:nth-child(2){
                 cursor: pointer;
             }
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
+        .menu-bar {
+            display: none;
+            i{
+                color: $main-color;
+            }
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+        }
+
     }
     #banner {
         background-color: $main-color3;
         height: 59px;
         display: flex;
         align-items: center;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
         .banner-box{
             width: 72.92%;
             margin: 0 auto;
@@ -120,12 +153,22 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 110px 0;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 60px 15px;
+        }
         .main-left{
             display: flex;
             flex-direction: column;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             p{
                 font-size: 25px;
                 font-weight: 700;
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
                 span{
                     color: $main-color;
                 }
@@ -135,10 +178,17 @@ header {
                 font-weight: 800;
                 margin-top: 11px;
                 margin-bottom: 100px;
+                @media screen and (max-width: 768px) {
+                    font-size: 40px;
+                    margin-bottom: 50px;
+                }
             }
             .main-card-box{
                 display: flex;
                 gap: 15px;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                }
                 .main-card-box{
                     margin-top: 82px;
                 }
@@ -151,6 +201,11 @@ header {
                     justify-content: center;
                     align-items: center;
                     gap: 14px;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        justify-content: space-between;
+                        padding: 0 30px;
+                    }
                     .main-card-txt{
                         p:nth-child(1){
                             font-size: 15px;
@@ -165,7 +220,7 @@ header {
                         }
                     }
                     img{
-                        width: 30%;
+                        width: 110px;
                     }
                     &:hover{
                         box-shadow: 0 0 20px #e2e2e2;
@@ -173,6 +228,11 @@ header {
                 }
             }
 
+        }
+        .main-right{
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 }
@@ -183,6 +243,12 @@ header {
     span{
         color: $main-color;
         font-weight: 700;
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+    @media screen and (max-width: 768px){
+        font-size: 25px;
     }
 }
 
@@ -190,14 +256,29 @@ header {
 #real{
     background-color: #FCFCFD;
     padding: 90px 0;
+    @media screen and (max-width: 768px) {
+        padding: 50px 0;
+    }
     .real{
         width: 72.92%;
         margin: 0 auto;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 0 15px;
+        }
         .real-card-box{
+            min-width: 1200px;
             margin-top: 50px;
             display: flex;
             justify-content: center;
-            gap: 1.86%;
+            gap: 20px;
+            @media screen and (max-width: 768px){
+                margin-top: 30px;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                min-width: 450px;
+            }
             .real-card{
                 width: 100%;
                 background-color: #fff;
@@ -208,21 +289,33 @@ header {
                 justify-content: center;
                 gap: 20px;
                 align-items: center;
-                padding: 27px 25px;
+                padding: 27px;
                 cursor: pointer;
                 transition: transform 0.3s ease-in;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    gap: 30px;
+                }
                 &:hover {
-                    transform: translateY(-3%) scale(1.05);;
+                    transform: translateY(-3%) scale(1.05);
                     .real-card-btn{
                     background-color: $sub-color;
                         p, i{
                             color: #fff;
                         }
                     }
+                    @media screen and (max-width: 768px) {
+                        transform: none;
+                    }
                 }
                 .real-card-txt{
                     text-align: center;
-                    white-space: nowrap;
+                    @media screen and (max-width: 768px) {
+                        text-align: left;
+                    }
+                    // white-space: nowrap;
                     h2{
                         font-size: 25px;
                         color: $sub-color;
@@ -236,7 +329,7 @@ header {
                 }
 
                 .real-card-btn{
-                    width: 175px;
+                    min-width: 175px;
                     height: 46px;
                     background-color: #fff;
                     border: 1px solid #e2e2e2;
@@ -246,6 +339,9 @@ header {
                     align-items: center;
                     gap: 10px;
                     cursor: pointer;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
                     p{
                         font-size: 15px;
                         font-weight: 400;
@@ -267,11 +363,24 @@ header {
     width: 72.92%;
     margin: 0 auto;
     padding: 90px 0;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 50px 15px;
+    }
     .skill-box{
         margin-top: 80px;
+        min-width: 1200px;
         display: flex;
         justify-content: start;
         gap: 1.07%;
+        @media screen and (max-width: 768px) {
+            min-width: 150px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            row-gap: 45px;
+            margin-top: 70px;
+        }
         .skill-card{
             background-color: $gray3;
             border-radius: 20px;
@@ -284,6 +393,9 @@ header {
             justify-content: flex-end;
             padding: 30px 0;
             gap: 18px;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             .skill-img{
                 width: 95px;
                 height: 95px;
@@ -302,11 +414,17 @@ header {
             h3{
                 font-size: 25px;
                 font-weight: 700;
+                // @media screen and (max-width: 768px) {
+                //     font-size: 20px;
+                // }
             }
             p{
                 font-size: 17px;
                 font-weight: 300;
                 color: $gray1;
+                // @media screen and (max-width: 768px) {
+                //     font-size: 15px;
+                // }
             }
         }
     }
@@ -328,12 +446,19 @@ header {
     width: 72.92%;
     margin: 0 auto;
     padding: 60px 0;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 40px 15px;
+    }
     .upgrade-box{
-        margin-top: 39px;
+        margin: 39px 0;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 25px;
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+        }
         .upgrade-card{
             width: 100%;
             display: flex;
@@ -341,8 +466,11 @@ header {
             align-items: center;
             background-color: #fff;
             border-radius: 20px;
-            padding: 40px 50px;
+            padding: 40px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            @media screen and (max-width: 768px) {
+                padding: 5px 30px;
+            }
             cursor: pointer;
             &:hover {
                 .upgrade-txt .upgrade-btn{
@@ -356,18 +484,30 @@ header {
                 display: flex;
                 flex-direction: column;
                 gap: 19px;
-                white-space: nowrap;
+                @media screen and (max-width: 768px) {
+                    gap: 10px;
+                }
+                // white-space: nowrap;
                 h3{
                     font-size: 30px;
                     font-weight: 600;
                     span{
                         color: $sub-color;
                     }
+                    @media screen and (max-width: 768px) {
+                        font-size: 25px;
+                    }
                 }
                 p{
                     font-size: 15px;
                     font-weight: 400;
                     line-height: 22px;
+                    @media screen and (max-width: 768px) {
+                        font-size: 13px;
+                        br {
+                            display: none;
+                        }
+                    }
                 }
                 .upgrade-btn{
                     width: 213px;
@@ -378,6 +518,9 @@ header {
                     justify-content: center;
                     align-items: center;
                     gap: 10px;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
                     p{
                         color: $gray1;
                         font-size: 15px;
@@ -389,12 +532,14 @@ header {
                 }
             }
             .upgrade-img{
-                width: 160px;
-                height: 160px;
+                width: 170px;
+                min-width: 100px;
+                height: 170px;
+                margin-left: 15px;
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
 
@@ -411,12 +556,19 @@ header {
     .review-container{
         width: 72.92%;
         margin: 0 auto;
-
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 0 15px;
+        }
         p:nth-child(2){
             color: $gray1;
             font-size: 25px;
             font-weight: 400;
-            margin: 22px 0 53px 0;
+            margin: 22px 0 50px 0;
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+                margin: 20px 0 30px 0;
+            }
         }
         .review-box{
             display: grid;
@@ -424,8 +576,10 @@ header {
                 display: grid;
                 grid-template-columns: repeat(5, 1fr); // 4열
                 gap: 20px; // 로고 간격
-                justify-items: center;
-                align-items: center;
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 10px;
+                }
                 img{
                     width: 100%;
                     height: 85px;
@@ -434,6 +588,11 @@ header {
                     box-shadow: 0 0 10px rgba(0,0,0,0.1);
                     background-color: #fff;
                     object-fit: contain;
+                    @media screen and (max-width: 768px) {
+                        height: 90%;
+                        border-radius: 15px;
+                        padding: 15px;
+                    }
                 }
             }
         }
@@ -449,12 +608,26 @@ header {
     padding: 90px 0;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 15px;
+        flex-direction: column;
+        margin: 70px 0;
+    }
     .notice-left{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 10px;
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+        }
         p:nth-child(1){
             line-height: 1.5;
+            @media screen and (max-width: 768px){
+                line-height: 18px;
+                height: auto;
+            }
         }
         p:nth-child(2){
             width: 188px;
@@ -468,20 +641,30 @@ header {
             line-height: 55px;
             margin-top: 30px;
             cursor: pointer;
+            @media screen and (max-width: 768px) {
+                margin-top: 20px;
+                width: 100%;
+            }
             &:hover {
                 background-color: $main-color3;
                 color: $main-color;
             }
+            img{
+                width: 514px;
+                animation: notice 0.5s infinite alternate;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+            }
         }
-        img{
-            width: 514px;
-            animation: notice 0.5s infinite alternate;
-        }
+
     }
     .notice-right{
         display: flex;
         flex-direction: column;
         width: 50%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
         .notice-content{
             font-size: 23px;
             display: flex;
@@ -489,18 +672,25 @@ header {
             align-items: center;
             border-bottom: 1px solid $gray2;
             padding: 30px 0;
+            @media screen and (max-width: 768px) {
+                font-size: 15px;
+            }
             cursor: pointer;
             .notice-content1{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
+                @media screen and (max-width: 768px) {
+                    font-size: 16px;
+                }
                 .notice-import{
                     background-color: $main-color;
                     color: #fff;
                     font-weight: 600;
                     border-radius: 50px;
                     padding: 10px 20px;
+                    white-space: nowrap;
                 }
                 p{
                     color: $font-color;
@@ -537,9 +727,20 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 0px 15px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+        }
         .ft-ct1{
             font-size: 20px;
             font-weight: 600;
+            @media screen and (max-width: 768px) {
+                font-size: 15px;
+            }
             p{
                 color: #fff;
             }
@@ -555,6 +756,10 @@ footer {
                 color: #fff;
                 padding: 6px 0;
                 border-bottom: 1px solid #fff;
+                @media screen and (max-width: 768px) {
+                    font-size: 15px;
+                    width: 270px;
+                }
             }
         }
     }
@@ -565,6 +770,14 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: end;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 40px 15px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+        }
         .footer-bt1{
             display: flex;
             flex-direction: column;
@@ -579,12 +792,18 @@ footer {
                 font-weight: 400;
                 color: $gray1;
                 margin-top: 19px;
+                @media screen and (max-width: 768px) {
+                    font-size: 13px;
+                }
             }
         }
         .footer-bt2 {
             display: flex;
             flex-direction: column;
             align-items: end;
+            @media screen and (max-width: 768px) {
+                align-items: flex-start;
+            }
             h3{
                 font-size: 35px;
                 font-weight: 800;
@@ -603,5 +822,8 @@ footer {
     font-weight: 400;
     span{
         font-weight: 600;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 15px;
     }
 }
