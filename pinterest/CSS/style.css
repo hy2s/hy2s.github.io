@@ -27,7 +27,7 @@ main > ul {
   flex-direction: row-reverse;
   justify-content: space-between;
   gap: 0.5rem;
-  /* float: right; */
+  float: right;
 }
 main > ul > li {
   flex: 1;
@@ -59,7 +59,8 @@ article img {
   width: 100%;
 }
 main > section {
-  display: flex;
+  clear: both;
+  /* display: flex; */
   flex-direction: column;
   gap: 1rem;
   margin: 5rem 0;
