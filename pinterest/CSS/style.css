@@ -27,7 +27,7 @@ main > ul {
   flex-direction: row-reverse;
   justify-content: space-between;
   gap: 0.5rem;
-  float: right;
+  /* float: right; */
 }
 main > ul > li {
   flex: 1;
