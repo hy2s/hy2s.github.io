@@ -60,7 +60,7 @@ article img {
 }
 main > section {
   clear: both;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 5rem 0;
