@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>끝말잇기</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- ************ 시작 페이지 *************** -->
+    <div id="start-wrap">
+      <div id="start">
+        <img src="images/logo.svg" alt="로고">
+        <p>제한 시간 1분 안에 당신의 실력을 보여주세요!
+        <div id="start-box">
+          <input type="text" id="start-input" placeholder="시작 단어를 입력해 주세요">
+          <button id="start-btn">게임 시작 <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+        </div>
+      </div>
+      <p id="footer">ⓒhy2_s</p>
+    </div>
+
+    <!-- ************ 게임 페이지 *************** -->
+    <div id="game">
+      <div id="header">
+        <img src="images/header-logo.svg" alt="header-logo">
+        <div class="score-wrap">
+          <p>score</p>
+          <h2 class="score"></h2>
+        </div>
+        <p class="timer">00:01</p>
+      </div>
+      <div id="chat-wrap">
+        <!-- <div class="left">
+          <p>사과</p>
+        </div> -->
+      </div>
+      <div id="chat-input-box">
+        <div id="chat-input-wrap">
+          <input type="text" id="chat-input" placeholder="단어를 입력해 주세요">
+          <button id="chat-btn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- ***************** 결과 **************** -->
+    <div id="result-wrap" style="display: none">
+      <div id="result-screen">
+          <img src="images/result-logo.svg" alt="결과화면 로고">
+          <p>당신의 점수</p>
+          <p class="result"><span id="final-score">15</span>점</p>
+        </div>
+        <button onclick="location.reload()">다시하기<i class="fa-solid fa-rotate-right fa-flip-horizontal" style="color: #ffffff;"></i></button>
+    </div>
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
