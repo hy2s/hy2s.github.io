@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'NanumSquareRound', sans-serif;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 .bold {
   font-weight: 400;
@@ -22,17 +22,13 @@ a {
   --placeholder: #BABABA;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 /* ******************** 시작 화면 ********************* */
 
 #wrap {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
 /* #start-wrap {
   display: none;
@@ -107,22 +103,19 @@ html, body {
 #game {
   display: none;
   background-color: #F9F9F9;
-  height: 100%;
+  height: 100dvh;
   overflow: hidden;
 }
 #header {
   position: fixed;
-  top: 0;
   height: 75px;
   background-color: #fff;
   width: 100%;
   max-width: 600px;
-  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 23px;
-  transition: transform 0.2s ease;
 }
 .score-wrap {
   display: flex;
@@ -227,7 +220,6 @@ html, body {
 /* ***************** 결과 화면 ******************* */
 #result-wrap {
   width: 100%;
-  height: 100vh;
   max-width: 600px;
   padding: 0px 35px;
 }
@@ -273,7 +265,53 @@ html, body {
 }
 #result-wrap > button:hover {
   background-color: #28aeec;
+
 }
 #result-wrap > button > i {
   padding: 7px;
+}
+
+
+
+/* ********** 팝업창 ************** */
+
+.popup {
+  
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.popup-box {
+  background-color: #fff;
+  width: 350px;
+  height: 170px;
+  border-radius: 10px;
+  color: var(--sub-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.popup-box > h2 {
+  font-size: 19px;
+}
+.popup-box > button {
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+  width: 110px;
+  height: 37px;
+  background-color: #F5F5F5;
+}
+.popup-box > button:hover {
+  background-color: #dddddd;
 }
