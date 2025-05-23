@@ -114,7 +114,7 @@ const $finalScore = document.querySelector("#final-score");
 const $resultScreen = document.querySelector("#result-wrap");
 
 const startTimer = () => {
-  timeLeft = 60;
+  timeLeft = 3;
   $timer.textContent = "01:00";
   $timer.style.color = "var(--sub-color)";
 
@@ -162,3 +162,4 @@ window.addEventListener('resize', () => {
     $header.style.top = "0";
   }
 });
+
