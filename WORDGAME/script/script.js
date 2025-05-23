@@ -144,19 +144,27 @@ const startTimer = () => {
 
 
 
+const header = document.getElementById("header");
+const chatInput = document.getElementById("chatInput");
 
-if (window.visualViewport) {
-  const $header = document.querySelector("#header");
+let lastHeight = window.innerHeight;
 
-  window.visualViewport.addEventListener("resize", () => {
-    if (window.visualViewport.height < window.innerHeight) {
-      // 키보드 올라옴
-      $header.style.position = "absolute";
-      $header.style.top = window.scrollY + "px";
-    } else {
-      // 키보드 내려감
-      $header.style.position = "fixed";
-      $header.style.top = "0";
+window.addEventListener("resize", () => {
+  const newHeight = window.innerHeight;
+
+  // 키보드가 올라왔을 때 (높이 줄어듦)
+  if (newHeight < lastHeight) {
+    header.classList.add("header--hidden");
+
+    // 채팅 인풋이 있다면 보이도록 처리
+    if (chatInput) {
+      setTimeout(() => {
+        chatInput.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 300); // 키보드 완전히 올라오는 타이밍 고려
     }
-  });
-}
+  } else {
+    header.classList.remove("header--hidden");
+  }
+
+  lastHeight = newHeight;
+});

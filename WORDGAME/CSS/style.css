@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'NanumSquareRound', sans-serif;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 .bold {
   font-weight: 400;
@@ -111,10 +111,8 @@ html, body {
   overflow: hidden;
 }
 #header {
-  position: absolute;
-  top:0;
-  left: 0;
-  z-index: 9999;
+  position: fixed;
+  top: 0;
   height: 75px;
   background-color: #fff;
   width: 100%;
@@ -124,6 +122,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0 23px;
+  transition: transform 0.2s ease;
 }
 .score-wrap {
   display: flex;
