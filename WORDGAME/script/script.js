@@ -144,27 +144,27 @@ const startTimer = () => {
 
 
 
-const header = document.getElementById("header");
-const chatInput = document.getElementById("chatInput");
+// const header = document.getElementById("header");
+// const chatInput = document.getElementById("chatInput");
 
-let lastHeight = window.innerHeight;
+// let lastHeight = window.innerHeight;
 
-window.addEventListener("resize", () => {
-  const newHeight = window.innerHeight;
+// window.addEventListener("resize", () => {
+//   const newHeight = window.innerHeight;
 
-  // 키보드가 올라왔을 때 (높이 줄어듦)
-  if (newHeight < lastHeight) {
-    header.classList.add("header--hidden");
+//   // 키보드가 올라왔을 때 (높이 줄어듦)
+//   if (newHeight < lastHeight) {
+//     header.classList.add("header--hidden");
 
-    // 채팅 인풋이 있다면 보이도록 처리
-    if (chatInput) {
-      setTimeout(() => {
-        chatInput.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 300); // 키보드 완전히 올라오는 타이밍 고려
-    }
-  } else {
-    header.classList.remove("header--hidden");
-  }
+//     // 채팅 인풋이 있다면 보이도록 처리
+//     if (chatInput) {
+//       setTimeout(() => {
+//         chatInput.scrollIntoView({ behavior: "smooth", block: "center" });
+//       }, 300); // 키보드 완전히 올라오는 타이밍 고려
+//     }
+//   } else {
+//     header.classList.remove("header--hidden");
+//   }
 
-  lastHeight = newHeight;
-});
+//   lastHeight = newHeight;
+// });

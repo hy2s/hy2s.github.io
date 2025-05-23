@@ -107,7 +107,7 @@ html, body {
 #game {
   display: none;
   background-color: #F9F9F9;
-  height: 100dvh;
+  height: 100%;
   overflow: hidden;
 }
 #header {
