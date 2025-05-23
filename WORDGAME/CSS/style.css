@@ -22,6 +22,11 @@ a {
   --placeholder: #BABABA;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 /* ******************** 시작 화면 ********************* */
 
 #wrap {
