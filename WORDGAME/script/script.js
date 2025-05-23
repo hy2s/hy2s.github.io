@@ -140,3 +140,25 @@ const startTimer = () => {
     }
   }, 1000);
 };
+
+
+
+
+
+let initialHeight = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  const currentHeight = window.innerHeight;
+
+  const $header = document.querySelector("#header");
+
+  if (currentHeight < initialHeight) {
+    // 키보드 올라옴
+    $header.style.position = "absolute";
+    $header.style.top = window.scrollY + "px";
+  } else {
+    // 키보드 내려감
+    $header.style.position = "fixed";
+    $header.style.top = "0";
+  }
+});
