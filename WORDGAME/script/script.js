@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     // 변수 선언 (객체 가져오기)
     const $input = document.querySelector("#chat-input");
     const $btn = document.querySelector("#chat-btn");
@@ -142,7 +140,7 @@ const startTimer = () => {
     }
   }, 1000);
 };
-=======
+
     // 변수 선언 (객체 가져오기)
     const $input = document.querySelector("#chat-input");
     const $btn = document.querySelector("#chat-btn");
@@ -285,8 +283,7 @@ const startTimer = () => {
     }
   }, 1000);
 };
->>>>>>> 4343ae017f5e684112873657fb11b45a2520db8d
-=======
+
     // 변수 선언 (객체 가져오기)
     const $input = document.querySelector("#chat-input");
     const $btn = document.querySelector("#chat-btn");
@@ -449,4 +446,3 @@ const startTimer = () => {
         $popupBtn.click();
       }
     }); 
->>>>>>> 8b61f2e71e7df7425487bfb85ed3db9bc7fd1e0e
