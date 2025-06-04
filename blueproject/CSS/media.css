@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+:root {
+  --main-color: #2957E2;
+  --sub-color: #eee;
+  --sub-font: 3rem;
+}
+
+html {
+  /* font-size는 10px 고정 */
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  /* overflow-x: hidden; */
+}
+#logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: var(--main-color);
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 80px;
+  position: fixed;
+  top: 30px;
+  left: 25px;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+@keyframes logoFade {
+  0%, 100% { opacity: 1;}
+  50% { opacity: 0.5; }
+}
+#logo > li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.5s;
+}
+#logo > li:nth-child(1){
+  top: 0;
+  background-color: var(--sub-color);
+  animation: logoFade 4s linear infinite;
+}
+#logo > li:nth-child(2){ top: 100%; background-color: var(--main-color);}
+#logo:hover > li:nth-child(1) { top: -105%; }
+#logo:hover > li:nth-child(2) { top: 0; }
+
+header {
+  padding-top: 150px;
+  height: 100vh;
+  position: relative;
+  font-size: 3rem;
+}
+h1 {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14vw;
+}
+header > h1:before {
+  content: 'PORTFOLIO';
+  font-size: 10rem;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--sub-color);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+}
+nav {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+.gnb {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.gnb > li {
+  transition: 0.5s;
+  position: relative;
+  margin-bottom: 0.5rem;
+  transform-origin: left center;
+}
+.gnb > li:hover {
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+.gnb li:hover::before {
+  width: 92%;
+}
+.gnb li::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  background-color: var(--sub-color);
+  z-index: -1;
+  transition: 0.8s;
+}
+@keyframes nav {
+  0% { width: 0%;}
+  100% { width: 95%; }
+}
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  align-self: flex-end;
+}
+.title > li {
+  margin: 2rem 0;
+}
+.title span {
+  font-weight: 600;
+}
+.arrow-wrap {
+  position: absolute;
+  bottom: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+}
+.arrow-wrap > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.arrow-wrap > .arrow-box {
+  width: 100%;
+  height: 100%;
+  background-color: var(--sub-color);
+  border-radius: 20px;
+  transform: rotate(30deg);
+  animation: arrowBox 10s linear infinite;
+}
+@keyframes arrowBox {
+  0% { rotate: 0; }
+  100% { rotate: 360deg; }
+}
+.arrow-wrap > .arrow {
+  color: var(--main-color);
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+}
+
+
+/* ***** 공통 ***** */
+section {
+  width: 90%;
+  margin: 10rem auto;
+}
+
+/* ***** about ***** */
+section#about {
+  margin-top: 10rem;
+}
+#about .info {
+  height: 30vh;
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  padding: 5.5rem 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 0;
+}
+#about .info h2 {
+  font-size: var(--sub-font);
+  font-weight: 900;
+  color: var(--sub-color);
+  display: inline-block;
+  padding-top: 1rem;
+  position: absolute;
+  -webkit-text-stroke: 1px var(--main-color);
+}
+#about .info h2::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(20deg);
+  width: 9rem;
+  aspect-ratio: 1/0.7;
+  background-color: var(--main-color);
+  border-radius: 15px;
+}
+.info p {
+  font-size: 2.3vw;
+  text-align: right;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+#about .word {
+  margin: 5rem 0;
+}
+#about .word h2 {
+  font-size: var(--sub-font);
+}
+#about .word h2.bottom {
+  text-align: right;
+}
+#about .keyword {
+  margin: 2rem 0;
+}
+#about .keyword > li {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+#about .keyword > li > p {
+  font-size: 4vw;
+  font-weight: 600;
+  padding: 1.5vw 5vw;
+  border: 1px solid var(--sub-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
