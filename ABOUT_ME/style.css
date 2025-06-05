@@ -1,0 +1,366 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.02em;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --main-color: #457B9D;
+  --font-color: #1D3557;
+  --sub-color: #9DC4DD;
+}
+body {
+  background-color: var(--main-color);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+
+/* **************** #intro **************** */
+
+#intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+}
+#intro > h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+
+/* **************** nav **************** */
+
+nav {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav > ul {
+  width: 40%;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+}
+nav > ul > li {
+  height: 45px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+nav > ul > li:hover {
+  border-bottom: 4px solid #fff;
+}
+
+
+/* **************** #wrap **************** */
+#wrap {
+  height: 612px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.80) 0%, rgba(157, 196, 221, 0.80) 100%);
+  display: flex;
+  position: relative;
+  margin: 40px 0;
+  /* overflow: hidden; */
+}
+#div-wrap {
+  width: 400%;
+  display: flex;
+  align-items: center;
+}
+
+.slide {
+  width: 100%;
+  background-color: tomato;
+}
+
+/* **************** #aboutme **************** */
+#aboutme {
+  background-color: tomato;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 250px;
+  color: var(--font-color);
+}
+#aboutme > .left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 38px;
+}
+#aboutme > .right {
+  width: 40%;
+}
+.text1 {
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+}
+.text1 > h1 {
+  font-size: 70px;
+}
+.left > p:nth-of-type(1) {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.left > p:nth-of-type(2) {
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* **************** #strengths **************** */
+#strengths {
+  width: 100%;
+  padding: 0 250px;
+  text-align: center;
+  color: var(--font-color);
+}
+.title {
+  font-size: 40px;
+  font-weight: 800;
+}
+.strengths-box {
+  display: flex;
+  justify-content: center;
+  gap: 66px;
+  margin-top: 140px;
+}
+.strengths-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 123, 157, 0.15);
+  backdrop-filter: blur(10px);
+  width: 430px;
+  height: 252px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 23px;
+}
+.strengths-card > img {
+  width: 180px;
+  position: absolute;
+  top: -35%;
+  left: 15px;
+}
+.strengths-card > h1 {
+  text-align: right;
+  margin-right: 50px;
+  font-size: 50px;
+  font-weight: 800;
+}
+.st-text > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.st-text > p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--main-color);
+}
+
+
+/* **************** #skills **************** */
+#skills {
+  width: 100%;
+  padding: 0 250px;
+  text-align: center;
+  color: var(--font-color);
+}
+.skills-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.skills-wrap > img {
+  width: 266px;
+}
+.skills-box {
+  width: 547px;
+  height: 291px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 123, 157, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 35px;
+}
+.skill {
+  display: flex;
+  justify-content: space-between;
+}
+.skill-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.skill-name > h3 {
+  font-size: 25px;
+  font-weight: 800;
+}
+.skill-name > img {
+  width: 36px;
+}
+.bar {
+  width: 278px;
+  height: 31px;
+  background-color: #457B9D26;
+  padding: 7px;
+  border-radius: 50px;
+}
+.fill {
+  height: 18px;
+  background-color: var(--font-color);
+  border-radius: 50px;
+  transition: all 0.5s;
+  animation: ani 1s;
+}
+@keyframes ani {
+    0% {
+        width: 0;
+    }
+}
+
+
+/* **************** #experience **************** */
+#experience {
+  width: 100%;
+  padding: 0 250px;
+  text-align: center;
+  color: var(--font-color);
+}
+.experience-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 72px;
+  background: url(images/12.png) no-repeat;
+  background-size: contain;
+}
+.ex-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.60);
+  box-shadow: 0px 5px 20px 0px rgba(69, 123, 157, 0.15);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 320px;
+  height: 323px;
+}
+.ex-card > img {
+  width: 100px;
+}
+.ex-text > h3 {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.ex-text > p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+
+/* **************** #btn-wrap **************** */
+#btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+#btn-wrap > button {
+  width: 62px;
+  height: 62px;
+  background-color: #457B9D4D;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 40px;
+  line-height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* **************** #list-wrap **************** */
+#list-wrap {
+  background: rgba(255, 255, 255, 0.10);
+  width: 217px;
+  height: 53px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.list-left {
+  width: 65%;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.list-left > div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px; 
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.list-left > .focus {
+  width: 30px;
+  background-color: #fff;
+}
+.list-right {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+.play {
+  width: 29px;
+  height: 29px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 29px;
+  cursor: pointer;
+}
