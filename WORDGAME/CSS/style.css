@@ -23,10 +23,12 @@ a {
 }
 
 /* ******************** 시작 화면 ********************* */
+
 #wrap {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
 /* #start-wrap {
   display: none;
@@ -94,20 +96,22 @@ a {
   font-size: 18px;
 }
 
+
+
 /* ******************** 게임 화면 ********************* */
+
 #game {
   display: none;
   background-color: #F9F9F9;
-  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 #header {
+  position: fixed;
+  height: 75px;
   background-color: #fff;
   width: 100%;
   max-width: 600px;
-  height: 75px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,6 +139,7 @@ a {
   overflow-y: auto;
   background-color: #F9F9F9;
 }
+
 .left, .right {
   width: 100%;
   padding: 3px 23px;
@@ -160,6 +165,7 @@ a {
   padding: 15px 35px;
   display: inline-block;
 }
+
 
 #chat-input-box {
   width: 100%;
@@ -210,11 +216,12 @@ a {
   align-items: center;  
 }
 
+
 /* ***************** 결과 화면 ******************* */
 #result-wrap {
   width: 100%;
   max-width: 600px;
-  padding: 0 35px;
+  padding: 0px 35px;
 }
 #result-screen {
   top: 0;
@@ -230,6 +237,7 @@ a {
   font-size: 20px;
   color: var(--sub-color);
 }
+
 #result-screen h2 {
   font-size: 32px;
   color: var(--main-color);
@@ -244,6 +252,7 @@ a {
   font-size: 100px;
   color: var(--main-color);
 }
+
 #result-wrap button {
   width: 100%;
   height: 65px;
@@ -256,7 +265,53 @@ a {
 }
 #result-wrap > button:hover {
   background-color: #28aeec;
+
 }
 #result-wrap > button > i {
   padding: 7px;
+}
+
+
+
+/* ********** 팝업창 ************** */
+
+.popup {
+  
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.popup-box {
+  background-color: #fff;
+  width: 350px;
+  height: 170px;
+  border-radius: 10px;
+  color: var(--sub-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.popup-box > h2 {
+  font-size: 19px;
+}
+.popup-box > button {
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+  width: 110px;
+  height: 37px;
+  background-color: #F5F5F5;
+}
+.popup-box > button:hover {
+  background-color: #dddddd;
 }
