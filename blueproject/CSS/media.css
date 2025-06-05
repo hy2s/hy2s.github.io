@@ -257,7 +257,7 @@ section#about {
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 #projects > .project-wrap > .item-list > li {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -334,6 +334,10 @@ section#about {
 .practice .item-detail > li > p{
   display: none;
 }
+.practice .item-detail > li > .tool {
+  font-size: 1.3rem;
+  padding: 0.5rem 1vw;
+}
 .practice .item .btn {
   font-size: 1.6rem;
 }
@@ -380,8 +384,8 @@ section#about {
 
 /* ***** footer ***** */
 footer {
-  background-image: linear-gradient(to bottom, #2957E2, #eee);
-  color: var(--sub-color);
+  background-color: var(--sub-color);
+  color: var(--main-color);
   font-size: 3rem;
   height: 100vh;
   display: flex;
@@ -402,14 +406,21 @@ footer .footer-wrap > p {
   padding: 0 1rem;
   font-size: 1.8rem;
 }
-footer .links > li {
-  background-color: var(--main-color);
-  color: var(--sub-color);
-  padding: 1rem 2rem;
+footer .links > li:nth-child(1) {
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 1.5rem 3rem;
   border-radius: 4rem;
   margin: 1rem 0;
   font-size: 2rem;
 }
-footer .links > li i {
-  margin-right: 1rem;
+footer .links > li:nth-child(2) {
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  border: 1px solid var(--sub-color);
+  padding: 1.5rem 3rem;
+  border-radius: 4rem;
+  margin: 1rem 0;
+  font-size: 2rem;
 }

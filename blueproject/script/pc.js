@@ -1,3 +1,5 @@
+(function(){
+
 // header 영역의 title이 오른쪽에서 왼쪽으로 이동
 const $headerMsg = document.querySelectorAll("header .title li");
 gsap.from($headerMsg, {
@@ -55,11 +57,14 @@ $aboutMsg.forEach((msg)=>{
     x: 200,
     opacity: 0,
     duration: 1,
+    dalay: 2,
     scrollTrigger: {
       trigger: msg,
       containerAnimation: horizonScroll,  // 가로 스크롤일 경우 꼭 기재
       start: "left 90%",
-      toggleActions: "play reverse play reverse"
+      // end: "50% 50%",
+      // scrub: true,
+      // toggleActions: "play reverse play reverse"
     }
   })
 });
@@ -158,3 +163,5 @@ $home.addEventListener("click",()=>{
     top: 0,
   });
 })
+
+})();
