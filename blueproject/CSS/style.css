@@ -186,7 +186,7 @@ section#about {
   font-size: var(--sub-font);
   display: inline-block;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 10%;
   color: var(--sub-color);
   -webkit-text-stroke: 1px var(--main-color);

@@ -41,33 +41,35 @@ const scrollWidth = $aboutWrap.scrollWidth - window.innerWidth;
 const horizonScroll = gsap.to($aboutWrap, {
   x: -scrollWidth,
   duration: 1,
+  ease: "none",
   scrollTrigger: {
     trigger: "#about",
     start: "top top",
     end: "+="+scrollWidth,
     pin: true,
-    scrub: true,
+    scrub: 1,
   }
 });
 
 // about info에 있는 p태그들은 오른쪽에서 왼쪽으로 이동
-const $aboutMsg = document.querySelectorAll("#about .info p");
+const $aboutMsg = document.querySelectorAll("#about .info");
 $aboutMsg.forEach((msg)=>{
   gsap.from(msg,{
     x: 200,
     opacity: 0,
     duration: 1,
-    dalay: 2,
     scrollTrigger: {
       trigger: msg,
       containerAnimation: horizonScroll,  // 가로 스크롤일 경우 꼭 기재
-      start: "left 90%",
-      // end: "50% 50%",
-      // scrub: true,
-      // toggleActions: "play reverse play reverse"
+      start: "left 70%",
+      end: "right 30%",
+      toggleActions: "play reverse play reverse",
+      markers: true
     }
   })
 });
+
+
 
 // keyword 부분이 가로로 왔다갔다 실행
 const $keywordList = document.querySelectorAll(".keyword>li");
