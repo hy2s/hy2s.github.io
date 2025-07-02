@@ -20,7 +20,8 @@ a {
   --sub-color: #9DC4DD;
 }
 body {
-  background-color: var(--main-color);
+  background-image: linear-gradient(90deg, #457B9D, #728baf);
+  background-image: linear-gradient(110deg, #457B9D 30%, #73a1be 50%, #4d6381 100%);
   height: 100vh;
   overflow-y: hidden;
 }
@@ -63,11 +64,11 @@ nav > ul {
 nav > ul > li {
   height: 45px;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.3vw;
   font-weight: 500;
   cursor: pointer;
 }
-nav > ul > li:hover {
+nav > ul > li:hover, .nav-focus {
   border-bottom: 4px solid #fff;
 }
 
@@ -79,22 +80,21 @@ nav > ul > li:hover {
   display: flex;
   position: relative;
   margin: 40px 0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #div-wrap {
-  width: 400%;
+  width: calc(100vw * 4);
   display: flex;
   align-items: center;
 }
 
 .slide {
-  width: 100%;
-  background-color: tomato;
+  width: 100vw;
+  flex-shrink: 0;
 }
 
 /* **************** #aboutme **************** */
 #aboutme {
-  background-color: tomato;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -102,15 +102,20 @@ nav > ul > li:hover {
   padding: 0 250px;
   color: var(--font-color);
 }
+
 #aboutme > .left {
-  width: 60%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 38px;
 }
 #aboutme > .right {
-  width: 40%;
+  width: 45%;
+}
+
+#aboutme > .right > img {
+  width: 100%;
 }
 .text1 {
   width: 750px;
@@ -118,11 +123,11 @@ nav > ul > li:hover {
   flex-direction: column;
 }
 .text1 > h1 {
-  font-size: 70px;
+  font-size: 4vw;
 }
 .left > p:nth-of-type(1) {
-  line-height: 30px;
-  font-size: 20px;
+  /* line-height: 30px; */
+  font-size: 1.4vw;
   font-weight: 400;
 }
 .left > p:nth-of-type(2) {
@@ -146,7 +151,7 @@ nav > ul > li:hover {
 .strengths-box {
   display: flex;
   justify-content: center;
-  gap: 66px;
+  gap: 40px;
   margin-top: 140px;
 }
 .strengths-card {
@@ -154,36 +159,41 @@ nav > ul > li:hover {
   border-radius: 20px;
   box-shadow: 0px 5px 20px 0px rgba(69, 123, 157, 0.15);
   backdrop-filter: blur(10px);
-  width: 430px;
+  width: 480px;
   height: 252px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 23px;
+  gap: 40px;
+}
+@media (max-width: 1440px) {
+  .strengths-card {
+    width: 700px;
+  }
 }
 .strengths-card > img {
-  width: 180px;
+  width: 45%;
   position: absolute;
   top: -35%;
-  left: 15px;
 }
 .strengths-card > h1 {
   text-align: right;
-  margin-right: 50px;
-  font-size: 50px;
+  margin-right: 0.8em;
+  font-size: 2.8vw;
   font-weight: 800;
 }
 .st-text > h3 {
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: 600;
   margin-bottom: 18px;
 }
 .st-text > p {
-  font-size: 15px;
+  font-size: 0.8vw;
   font-weight: 300;
   color: var(--main-color);
 }
+
 
 
 /* **************** #skills **************** */
@@ -202,6 +212,13 @@ nav > ul > li:hover {
 .skills-wrap > img {
   width: 266px;
 }
+@media (max-width: 1440px) {
+  .skills-wrap > img {
+    width: 180px;
+    margin: 50px 0;
+  }
+}
+
 .skills-box {
   width: 547px;
   height: 291px;
@@ -215,14 +232,20 @@ nav > ul > li:hover {
   gap: 28px;
   padding: 0 35px;
 }
+@media (max-width: 1440px) {
+  .skills-box {
+    width: 450px;
+  }
+}
 .skill {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 .skill-name {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 .skill-name > h3 {
   font-size: 25px;
@@ -249,6 +272,14 @@ nav > ul > li:hover {
     0% {
         width: 0;
     }
+}
+@media (max-width: 1440px) {
+  .skill-name > h3 {
+    font-size: 18px;
+  }
+  .bar {
+    width: 200px;
+  }
 }
 
 
@@ -280,6 +311,12 @@ nav > ul > li:hover {
   width: 320px;
   height: 323px;
 }
+@media (max-width: 1440px) {
+  .ex-card {
+    width: 450px;
+    gap: 50px;
+  }
+}
 .ex-card > img {
   width: 100px;
 }
@@ -288,11 +325,26 @@ nav > ul > li:hover {
   font-weight: 800;
   margin-bottom: 12px;
 }
+
 .ex-text > p {
   font-size: 17px;
   font-weight: 400;
 }
 
+@media (max-width: 1440px) {
+  .ex-text > h3 {
+    font-size: 25px;
+  }
+  .ex-text > p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1440px) {
+  #aboutme, #strengths, #skills, #experience {
+    padding: 0 200px;
+  }
+}
 
 
 /* **************** #btn-wrap **************** */
@@ -304,6 +356,11 @@ nav > ul > li:hover {
   position: absolute;
   top: 50%;
   left: 0;
+}
+@media (max-width: 1440px) {
+  #btn-wrap {
+    padding: 0 50px;
+  }
 }
 #btn-wrap > button {
   width: 62px;
@@ -322,8 +379,8 @@ nav > ul > li:hover {
 /* **************** #list-wrap **************** */
 #list-wrap {
   background: rgba(255, 255, 255, 0.10);
-  width: 217px;
-  height: 53px;
+  width: 300px;
+  height: 60px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -331,36 +388,39 @@ nav > ul > li:hover {
   border-radius: 50px;
 }
 .list-left {
-  width: 65%;
+  width: 55%;
   height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
-.list-left > div {
+.list-left div {
   width: 10px;
   height: 10px;
   border-radius: 50px; 
   background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
 }
-.list-left > .focus {
+.list-left div.focus {
   width: 30px;
   background-color: #fff;
 }
 .list-right {
-  width: 35%;
+  width: 45%;
   display: flex;
   justify-content: center;
 }
 .play {
-  width: 29px;
-  height: 29px;
+  width: 100px;
+  height: 35px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  line-height: 29px;
+  line-height: 35px;
   cursor: pointer;
 }
+
+

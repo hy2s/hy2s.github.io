@@ -9,17 +9,13 @@
   <title>About Me</title>
 </head>
 <body>
-  <!-- <div id="intro">
-    <img src="images/1.png" alt="인사하는 이미지" style="width: 300px;">
-    <h1>안녕하세요, 저는 김혜승입니다!</h1>
-  </div> -->
 
   <nav>
     <ul>
-      <li>About Me</li>
-      <li>Strengths</li>
-      <li>Skills</li>
-      <li>Experience</li>
+      <li data-index="1" class="nav-focus">About Me</li>
+      <li data-index="2">Strengths</li>
+      <li data-index="3">Skills</li>
+      <li data-index="4">Experience</li>
     </ul>
   </nav>
   
@@ -30,7 +26,7 @@
           <div class="left">
             <div class="text1">
               <h1>안녕하세요 <span><img src="images/hand.png" alt="손 아이콘" style="width: 65px;"></span></h1>
-              <h1>저는 김혜승입니다</h1>
+              <h1>저는 김혜승입니다!</h1>
             </div>
             <p>시각적 완성도와 사용자 경험을 고려한 디자인을 추구하며, <br>
               퍼블리싱과 프론트엔드까지 함께 배우고 있습니다.</p>
@@ -107,6 +103,15 @@
                   <h3>Illustrator</h3>
                 </div>
                 <div class="bar">
+                  <div class="fill" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">
+                  <img src="images/xd.png" alt="XD">
+                  <h3>XD</h3>
+                </div>
+                <div class="bar">
                   <div class="fill" style="width: 50%;"></div>
                 </div>
               </div>
@@ -139,7 +144,7 @@
                   <h3>JavaScript</h3>
                 </div>
                 <div class="bar">
-                  <div class="fill" style="width: 40%;"></div>
+                  <div class="fill" style="width: 70%;"></div>
                 </div>
               </div>
               <div class="skill">
@@ -148,7 +153,7 @@
                   <h3>React</h3>
                 </div>
                 <div class="bar">
-                  <div class="fill" style="width: 20%;"></div>
+                  <div class="fill" style="width: 70%;"></div>
                 </div>
               </div>
             </div>
@@ -172,7 +177,7 @@
               <img src="images/8.png" alt="학교 이모지">
               <div class="ex-text">
                 <h3>대학 재학</h3>
-                <p>멀티미디어 전공으로 <br>
+                <p>멀티미디어학과 전공으로 <br>
                   디자인과 개발을 두루 배웠습니다.</p>
               </div>
             </div>
@@ -213,10 +218,11 @@
       <div></div>
     </div>
     <div class="list-right">
-      <div class="play">■</div>
+      <div class="play">auto play ▶</div>
+      <!-- <div class="play">stop ■</div> -->
     </div>
   </div>
   
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 </html>
