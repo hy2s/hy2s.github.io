@@ -64,7 +64,7 @@ $aboutMsg.forEach((msg)=>{
       start: "left 70%",
       end: "right 30%",
       toggleActions: "play reverse play reverse",
-      markers: true
+      markers: false
     }
   })
 });
